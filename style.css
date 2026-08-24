@@ -476,7 +476,7 @@ hr {
     height: 200px;
   }
 
- 
+  
 #about {
   padding: 2rem;
 }
@@ -504,7 +504,6 @@ hr {
     padding: 2rem;
   }
 }
-
 
 
 
@@ -560,6 +559,60 @@ hr {
   font-size: clamp(1rem, 0.8rem + 1vw, 1.2rem); /* Responsive font size */
   color: #262626;
   margin-top: 1rem;
+}
+
+/* Certificates Section Styles */
+#certificates {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 5rem;
+  background-color: #f9f9f9;
+}
+
+.certificate-title {
+  font-size: 1.5em;
+  color: #262626;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.certificates-parent-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  max-width: 1200px;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.certificate-container {
+  text-align: center;
+  width: 100%;
+  max-width: 350px;
+}
+
+.certificate-image {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.certificate-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+.certificate-info {
+  font-size: clamp(1rem, 0.8rem + 1vw, 1.2rem);
+  color: #262626;
+  margin-top: 1rem;
+  font-weight: 500;
 }
 
 /* Footer Styles */
@@ -649,6 +702,48 @@ hr {
   .social-icons {
       justify-content: center;
   }
+  
+  /* Certificates Section */
+  .certificates-parent-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .certificate-container {
+    max-width: 100%;
+  }
+
+  #certificates {
+    padding: 2rem;
+  }
+
+  /* Projects Section */
+  .projects-parent-container,
+  .projects-parent-2-container {
+    flex-direction: column; /* Column layout for smaller screens */
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .projects-container-3 {
+    max-width: 100%;
+  }
+
+  /* Footer */
+  .info-container-2 {
+    flex-direction: column; /* Column layout for smaller screens */
+    gap: 1rem;
+  }
+
+  .info-container {
+    text-align: center;
+  }
+
+  .social-follow {
+    margin-top: 2rem;
+  }
+
 }
 
 @media (max-width: 480px) {
@@ -727,34 +822,4 @@ hr {
   font-size: 1.5rem;
   color: #fff;
   margin: 0 0.5rem;
-}
-
-/* Media Query for Screens Below 768px */
-@media (max-width: 768px) {
-  /* Projects Section */
-  .projects-parent-container,
-  .projects-parent-2-container {
-    flex-direction: column; /* Column layout for smaller screens */
-    align-items: center;
-    gap: 2rem;
-  }
-
-  .projects-container-3 {
-    max-width: 100%;
-  }
-
-  /* Footer */
-  .info-container-2 {
-    flex-direction: column; /* Column layout for smaller screens */
-    gap: 1rem;
-  }
-
-  .info-container {
-    text-align: center;
-  }
-
-  .social-follow {
-    margin-top: 2rem;
-  }
-
 }
